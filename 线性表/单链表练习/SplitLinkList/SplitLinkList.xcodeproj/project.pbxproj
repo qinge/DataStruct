@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2581420F1CCFC4AC009A8F8B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2581420E1CCFC4AC009A8F8B /* main.cpp */; };
-		258142171CCFC612009A8F8B /* LinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 258142151CCFC612009A8F8B /* LinkList.cpp */; };
+		25A254281CD0F9AC00C0AD59 /* LinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A254261CD0F9AC00C0AD59 /* LinkList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		2581420B1CCFC4AC009A8F8B /* SplitLinkList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SplitLinkList; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581420E1CCFC4AC009A8F8B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		258142151CCFC612009A8F8B /* LinkList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LinkList.cpp; path = ../../../LinkList/LinkList/LinkList.cpp; sourceTree = "<group>"; };
-		258142161CCFC612009A8F8B /* LinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LinkList.hpp; path = ../../../LinkList/LinkList/LinkList.hpp; sourceTree = "<group>"; };
+		25A254261CD0F9AC00C0AD59 /* LinkList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkList.cpp; sourceTree = "<group>"; };
+		25A254271CD0F9AC00C0AD59 /* LinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2581420E1CCFC4AC009A8F8B /* main.cpp */,
-				258142151CCFC612009A8F8B /* LinkList.cpp */,
-				258142161CCFC612009A8F8B /* LinkList.hpp */,
+				25A254261CD0F9AC00C0AD59 /* LinkList.cpp */,
+				25A254271CD0F9AC00C0AD59 /* LinkList.hpp */,
 			);
 			path = SplitLinkList;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2581420F1CCFC4AC009A8F8B /* main.cpp in Sources */,
-				258142171CCFC612009A8F8B /* LinkList.cpp in Sources */,
+				25A254281CD0F9AC00C0AD59 /* LinkList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +243,7 @@
 				258142141CCFC4AC009A8F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
