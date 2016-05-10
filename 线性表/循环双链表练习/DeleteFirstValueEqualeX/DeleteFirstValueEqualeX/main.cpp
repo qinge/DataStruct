@@ -1,15 +1,14 @@
 //
 //  main.cpp
-//  CircleDLinkList
+//  DeleteFirstValueEqualeX
 //
-//  Created by qinge on 16/5/9.
+//  Created by qinge on 16/5/10.
 //  Copyright © 2016年 Q. All rights reserved.
 //
 
 #include <iostream>
 
 typedef char ElemType;
-
 typedef struct DNode{
     ElemType data;
     struct DNode *prior;
@@ -27,12 +26,12 @@ extern int LocateElem(DLinkList *L, ElemType e);
 extern int ListInsert(DLinkList * &L, int i, ElemType e);
 extern int ListDelete(DLinkList * &L, int i, ElemType &e);
 
+int deletem(DLinkList * &L, ElemType e);
 
 
 int main(int argc, const char * argv[]) {
 
     DLinkList *L;
-    ElemType e;
     printf("(1) 初始化循环双链表 \n");
     InitList(L);
     printf("(2) 依次采用尾插法插入 a,b,c,d,e 元素\n");
@@ -40,35 +39,48 @@ int main(int argc, const char * argv[]) {
     ListInsert(L, 2, 'b');
     ListInsert(L, 3, 'c');
     ListInsert(L, 4, 'd');
-    ListInsert(L, 5, 'e');
+    ListInsert(L, 5, 'a');
     printf("(3) 输出循环双链表 \n");
     DispList(L);
     
-    printf("(4) 输出循环双链表的长度 = %d \n", ListLength(L));
-    
-    printf("(5) 循环双链表为: %s \n", ListEmpty(L) ? "空" : "非空");
-    
-    GetElem(L, 3, e);
-    printf("(6) 循环双链表的第三个元素 = %c \n", e);
-    
-    printf("(7) 元素 a 的位置 = %d \n", LocateElem(L, 'a'));
-    
-    printf("(8) 在第四个位置上插入 f 元素\n");
-    ListInsert(L, 4, 'f');
-    printf("(9) 输出循环双链表 \n");
+    printf("(4) 删除 data = a 的第一个结点 \n");
+    deletem(L, 'a');
+    printf("(5) 输出循环双链表 \n");
     DispList(L);
-    
-    printf("(10) 删除 L 的第三个元素 \n");
-    ListDelete(L, 3, e);
-    printf("(11) 输出循环双链表 \n");
-    DispList(L);
-    
-    printf("(12) 释放循环双链表 \n");
-    DestroyList(L);
-
     
     return 0;
 }
+
+
+
+/**
+ *  删除第一个data 域为 x 的结点
+ *
+ *  @param L
+ *  @param e
+ *
+ *  @return
+ */
+int deletem(DLinkList * &L, ElemType e){
+    DLinkList *p = L -> next;
+    while (p != L && p -> data != e) {
+        p = p -> next;
+    }
+    if (p == L) {
+        return 0;
+    }
+    p -> next -> prior = p -> prior;
+    p -> prior -> next = p -> next;
+    free(p);
+    return 1;
+}
+
+
+
+
+
+
+
 
 
 
